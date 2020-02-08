@@ -62,13 +62,6 @@ void analhand(char *deck, double *tally,
 	    } /* not a straight */
          } /* for each card in a straight */
       } /* if possible straight */
-   /********************************************************/
-   /* Debugging                                            */
-   /********************************************************/
-   // shwdeck(deck, suitkount, rankkount);
-   // printf("min %d max %d diff %d\n",
-      // minrank, maxrank, rankdiff);
-   /********************************************************/
    if (suitkount[0] == 5 || suitkount[1] == 5 || 
       suitkount[2] == 5 || suitkount[3] == 5)
       {
@@ -112,10 +105,6 @@ void analhand(char *deck, double *tally,
       suitkount[2] == 5 || suitkount[3] == 5)
       {
       tally[FLUSH] += 1.0;
-      /* debugging */
-      // shwdeck(deck, suitkount, rankkount);
-      // printf("min %d max %d diff %d\n",
-         // minrank, maxrank, rankdiff);
       return;
       } /* if flush */
    for (i=0;i<13;i++)
@@ -125,10 +114,6 @@ void analhand(char *deck, double *tally,
          rankkount[i+3] == 1 && rankkount[i+4] == 1)
 	 {
          tally[STRAIGHT] += 1.0;
-         /* debugging */
-         // shwdeck(deck, suitkount, rankkount);
-         // printf("min %d max %d diff %d\n",
-            // minrank, maxrank, rankdiff);
          return;
 	 } /* straight found */
       } /* for each rank */
@@ -140,10 +125,6 @@ void analhand(char *deck, double *tally,
       rankkount[2] == 1 && rankkount[3] == 1)
       {
       tally[STRAIGHT] += 1.0;
-      /* debugging */
-      // shwdeck(deck, suitkount, rankkount);
-      // printf("min %d max %d diff %d\n",
-         // minrank, maxrank, rankdiff);
       return;
       } /* straight found */
    for (i=0;i<13;i++)
