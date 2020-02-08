@@ -1,0 +1,155 @@
+Testing instructions for all the 5 card stud poker programs
+in this repository.
+
+Read REFERENCES for information about the 5 card stud poker test.
+
+--------
+
+Program by program testing instructions.
+
+Fibonacci random number generator
+
+Run fibostud to apply the 5 card stud poker test to the fibonacci
+random number generator.  There are no parameters.
+
+./fibostud
+
+This program is expected to fail the test.
+
+--------
+
+64 bit LFSR random number generator
+
+Run lfsrstud to apply the 5 card stud poker test to the 64 bit
+LFSR random number generator.  There are no parameters.
+
+./lfsrstud
+
+This program is expected to fail the test.
+
+--------
+
+32 bit RANDU random number generator
+
+Run rustud to apply the 5 card stud poker test to the 32 bit
+RANDU random number generator.  There are no parameters.
+
+./rustud
+
+This program is expected to fail the test.
+
+--------
+
+Sine wave random number generator
+
+Run randu to apply the 5 card stud poker test to the sine wave
+random number generator.  There are no parameters.
+
+./sinestud
+
+This program is expected to fail the test.
+
+--------
+
+eegl64 random number generator
+
+Run 5cdstud to apply the 5 card stud poker test to the eegl64
+uniform random number generator.  There are no parameters.
+
+./5cdstud
+
+This program is expected to pass the test.
+
+--------
+
+etaus random number generator
+
+Run etausstud to apply the 5 card stud poker test to the etaus
+uniform random number generator.  There are no parameters.
+
+./etausstud
+
+This program is expected to pass the test.
+
+--------
+
+GNU Scientific Library random number generators
+
+Run tstgsl.sh to apply the 5 card stud poker test to the GNU
+Scientific Library collection of random number generators.
+There is one parameter, the name of the GSL generator.
+
+./tstgsl.sh RNG_name 
+
+Example,
+
+./tstgsl.sh taus2
+
+This example runs the 5 card stud poker test on the GSL taus2
+random number generator.
+
+To find a list of valid GSL random number generators, enter
+a parameter that produces an error.
+
+./tstgsl.sh ?
+
+This test is expected to pass the test except for three
+generators.
+
+random64-glibc2
+
+random64-libc5
+
+randu
+
+To run a test of all GSL generators, run runall.sh.
+
+./runall.sh
+
+Read the results of this test by browsing allgsl.out.
+This test reads allgsl.lst as an input file.
+
+--------
+
+Dieharder package random number generators
+
+Run tstdie.sh to apply the 5 card stud poker test to the
+dieharder collection of random number generators.  There is
+one parameter, the id of the dieharder generator.
+
+./tstdie.sh RNG_number
+
+Example,
+
+./tstdie.sh 053
+
+This example runs the 5 card stud poker test on the dieharder
+taus2 random number generator.
+
+To find a list of valid dieharder random number generators,
+enter the following dieharder command.
+
+dieharder -g -l
+
+This test is expected to pass the test except for the uni
+generator.
+
+To run a test of all dieharder generators, run dieall.sh.
+
+./dieall.sh
+
+Read the results of this test by browsing alldie.out.
+This test reads alldie.lst as an input file.
+
+--------
+
+Submit more 5 card stud poker tests.
+
+If you have a random number generator not included in this
+repository, you are welcome to add more 5 card stud poker test
+programs to this repository.
+
+--------
+
+Read REFERFENCES for information about the 5 card stud poker test.
+Read INSTALL for installing this repository.
