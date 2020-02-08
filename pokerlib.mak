@@ -20,7 +20,6 @@
 
 OBJ=analdeck.o \
 	analhand.o \
-	ckdeck.o \
 	kounthand.o \
 	shwdeck.o \
 	calcchi.o \
@@ -68,9 +67,6 @@ analdeck.o:			analdeck.c
 
 analhand.o:			analhand.c
 		$(CC) $(CFLAGS) analhand.c
-
-ckdeck.o:			ckdeck.c
-		$(CC) $(CFLAGS) ckdeck.c
 
 kounthand.o:			kounthand.c
 		$(CC) $(CFLAGS) kounthand.c
